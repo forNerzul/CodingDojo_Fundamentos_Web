@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Posición de práctica</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        .container{
-    width: 950px;
-    background-color: silver;
-    margin: 0px auto;
-}
-.top-nav {
-    height: 150px;
-    background-color: green;
-}
-.side-nav {
-    height: 300px;
-    width: 200px;
-    background-color: blue;
-}
-.main {
-    height: 400px;
-    width: 700px;
-    background-color: red;
-}
-.sub-content {
-    height: 200px;
-    width: 210px;
-    background-color: yellow;
-}
-#advertisement {
-    height: 120px;
-    width: 660px;
-    background-color: purple;
-
-
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="top-nav"></div>
-        <div class="side-nav"></div>
-        <div class="main">
-            <div class="sub-content"></div>
-            <div class="sub-content"></div>
-            <div class="sub-content"></div>
-            <div id="advertisement"></div>
+    <head>
+        <title>Posición de práctica</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            .container {
+                width: 950px;
+                background-color: silver;
+                margin: 0px auto;
+                display: block;
+                padding-top: 2px;
+            }
+            .top-nav {
+                height: 150px;
+                background-color: green;
+                display: block;
+                margin-inline: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .side-nav {
+                height: 300px;
+                width: 200px;
+                background-color: blue;
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .main {
+                height: 400px;
+                width: 700px;
+                background-color: red;
+                display: inline-block;
+                margin-left: 25px;
+                margin-bottom: 10px;
+                vertical-align: top;
+            }
+            .sub-content {
+                height: 200px;
+                width: 210px;
+                background-color: yellow;
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            #advertisement {
+                height: 120px;
+                width: 660px;
+                background-color: purple;
+                display: block;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-nav"></div>
+            <div class="side-nav"></div>
+            <div class="main">
+                <div class="sub-content"></div>
+                <div class="sub-content"></div>
+                <div class="sub-content"></div>
+                <div id="advertisement"></div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
-
