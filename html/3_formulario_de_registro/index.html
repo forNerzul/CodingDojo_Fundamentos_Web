@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Formulario de registro</h1>
+        <p>
+            <label for="nombre">Nombre: *</label>
+            <input type="text" name="nombre">
+        </p>
+        <p>
+            <label for="apellido">Apellido: *</label>
+            <input type="text" name="apellido">
+        </p>
+        <p>
+            <label for="email">e-mail: *</label>
+            <input type="text" name="email">
+        </p>
+        <p>
+            <label for="password">Password: *</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <label for="confirmPassword">Confirmar Password: *</label>
+            <input type="password" name="confirmPassword">
+        </p>
+        <p>
+            <label for="nacimiento">Fecha de nacimiento: </label>
+            <input type="date" name="nacimiento" placeholder="mm/dd/yyyy">
+        </p>
+        <p>
+            <label for="genero">Genero: </label>
+            <p>
+                <input type="radio" name="genero" value="masculino"> Masculino
+                <input type="radio" name="genero" value="femenino"> Femenino
+                <input type="radio" name="genero" value="no-binario"> No Binario
+                <input type="radio" name="genero" value="sin-respuesta"> Prefiero no responder
+            </p>
+        </p>
+        <p>
+            <label for="descripcion">Una breve descripcion sobre mi: </label>
+            <p>
+                <textarea name="descripcion" id="" cols="30" rows="5"></textarea>
+            </p>
+        </p>
+        <p>
+            <label for="lenguaje-programacion">Lenguaje de programación favorito: </label>
+            <select name="lenguaje-programacion">
+                <option value="javascript">javaScript</option>
+                <option value="python">Python</option>
+                <option value="dart">Dart</option>
+            </select>
+        </p>
+        <p>
+            <input type="checkbox" name="recibir-emails"> Si, me gustaria recibir noticias por email.
+        </p>
+
+        <button type="submit">Crear Cuenta</button>
+        <p>(*) Indica un campo requerido</p>
+    </form>
+</body>
+</html>

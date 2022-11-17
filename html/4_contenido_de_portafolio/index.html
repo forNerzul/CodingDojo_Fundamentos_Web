@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protafolios</title>
+    <style>
+        
+        table {
+            border-collapse: collapse;
+            border-style: hidden;
+        }
+
+        table.tecnologias td, table.tecnologias th, table.tecnologias tr td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sergio García</h1>
+    <img src="img/profile.jpeg" alt="Fotografía que muestra el rostro de Sergio sonriente" height="150" width="150">
+    <table>
+        <tr>
+            <td>
+                <img src="img/github.png" alt="Logotipo de Github" height="50" width="50">
+            </td>
+            <td>
+                <a href="https://github.com/fornerzul">Mi Github</a>
+            </td>
+            <td>
+                <img src="img/linkedin.png" alt="Logotipo de Linkedin" height="30" width="30">
+            </td>
+            <td>
+                <a href="https://www.linkedin.com/in/sergio-javier-garc%C3%ADa-mart%C3%ADnez-28666b249/">Mi linkedin</a>
+                
+            </td>
+            <td>
+                <img src="img/email.png" alt="Logotipo de Gmail" height="30" width="40">
+            </td>
+            <td>
+                <a href="mailto:sbeardman92@gmail.com">Mi e-mail</a>
+            </td>
+        </tr>
+    </table>
+    <h2>Tecnologías</h2>
+    <table class="tecnologias">
+        <thead>
+            <tr>
+                <th>Front-End</th>
+                <th>Python</th>
+                <th>Javascript</th>
+                <th>Base de datos</th>
+                <th>Conceptos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>Django</td>
+                <td>Express</td>
+                <td>MySQL</td>
+                <td>AJAX</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Flask</td>
+                <td>Mongoose</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Unitest</td>
+                <td>React</td>
+                <td></td>
+                <td>REST</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Valores</h2>
+    <ul>
+        <li>Control</li>
+        <li>Disciplina</li>
+    </ul>
+    <h2>CosoAPP</h2>
+    <img src="img/cosoapp.png" alt="Logotipo de la aplicación CosoAPP" height="100" width="100">
+    <p>
+        Aplicación mágica para hacer cosas, creada en Javascript - <a href="#">código</a> | <a href="#">Implementación</a>
+    </p>
+    <h2>Contactame</h2>
+    <form action="#">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre">
+            <label for="email">Email: </label>
+            <input type="text" id="email">
+        </p>
+        <p>
+            <label for="mensaje">Mensaje:</label>
+            <br>
+            <textarea id="mensaje" cols="51" rows="5"></textarea>
+        </p>
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</body>
+</html>
