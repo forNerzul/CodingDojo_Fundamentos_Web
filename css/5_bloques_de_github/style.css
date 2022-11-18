@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+}
+.container{
+    width: 850px;
+    background-color:gainsboro;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+.row-1 {
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.row-2 {
+    background-color: lightpink;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.row-3 {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.img {
+    width: 200px;
+}
+
+.footer {
+    margin: 20px 0px 0px;
+    text-align: center;
+}
