@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: darkgray;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.search {
+    padding: 10px;
+    width:400px;
+    height: 40px;
+    border: 3px;
+    border-style: solid;
+}
+
+.search::placeholder {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn {
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 3px 3px black;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: cadetblue;
+    color: white;
+    padding: 2px 20px;
+}
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.term-card {
+    width: 580px;
+    padding: 20px;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.term {
+    width: 120px;
+    text-align: center;
+}
+
+.word {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.noun {
+    font-style: italic;
+}
+
+.likes {
+    margin-top: 20px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 3px 3px black;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(219, 188, 103);
+    color: black;
+    padding: 2px 20px;
+}
+
+.definition {
+    font-size: 16px;
+}
+
+.widget-card {
+    width: 350px;
+    padding: 20px;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget-btn {
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 3px 3px black;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(112, 187, 112);
+    color: black;
+    padding: 2px 20px;
+}

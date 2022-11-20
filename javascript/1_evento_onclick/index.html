@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Evento onclick</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="page-title">Dojonary</div>
+                <input type="text" class="search" name="search" id="search" placeholder="Search">
+                <button class="btn" onclick="loginBtn(this)">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <section class="main">
+                <div class="post">
+                    <div class="term-card">
+                        <div class="term">
+                            <div class="word">ninja</div>
+                            <div class="noun">noun</div>
+                            <div class="plural">Plural: ninjas</div>
+                            <button class="likes" onclick="liked()">13 likes</button>
+                        </div>
+                        <div class="definition">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a>
+                        </div>
+                    </div>
+                    <div class="term-card">
+                        <div class="term">
+                            <div class="word">ninja</div>
+                            <div class="noun">noun</div>
+                            <div class="plural">Plural: ninjas</div>
+                            <button class="likes">37 likes</button>
+                        </div>
+                        <div class="definition">A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                        <div class="widget-card">
+                            <div class="widget-title">
+                                Dojonary is defined by <span>YOU</span>
+                            </div>
+                            <button class="widget-btn" onclick="removeBtn(this)">Add Definition</button>
+                        </div>
+                </div>
+            </section>
+        </div>
+
+    <script src="js/javascript.js"></script>
+</body>
+</html>
