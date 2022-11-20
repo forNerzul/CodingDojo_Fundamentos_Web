@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Me gusta</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Network</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="sub-title">Your Feed</h2>
+
+        <div class="main">
+            <div class="sidebar">
+                <div class="profile">
+                    <img  class="profile-img" src="assets/img/user-circle.png" alt="">
+                    <a href="#">Add an avatar</a>
+                    <div class="username">James Doe</div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="single-post">
+                    <div class="post-header">
+                        <div class="username">Neil M</div>
+                        <div class="like-wrap">
+                            <div class="like-counter"> <span class="counter" id="like-1">0</span> like(s)</div>
+                            <button class="like-btn" onclick="countLike('like-1')">Like</button>
+                        </div>
+                    </div>
+                    <div class="post-description">I just set up this new discord bot, let me know what you all think. <a href="#">link</a></div>
+                </div>
+                <div class="single-post">
+                    <div class="post-header">
+                        <div class="username">Nichole K</div>
+                        <div class="like-wrap">
+                            <div class="like-counter"> <span class="counter" id="like-2">0</span> like(s)</div>
+                            <button class="like-btn" onclick="countLike('like-2')">Like</button>
+                        </div>
+                    </div>
+                    <div class="post-description">Just finished my <a href="#">next comic</a>, check it out.</div>
+                </div>
+                <div class="single-post">
+                    <div class="post-header">
+                        <div class="username">Jim R</div>
+                        <div class="like-wrap">
+                            <div class="like-counter"> <span class="counter" id="like-3">0</span> like(s)</div>
+                            <button class="like-btn" onclick="countLike('like-3')">Like</button>
+                        </div>
+                    </div>
+                    <div class="post-description">I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body> 
+</html>
