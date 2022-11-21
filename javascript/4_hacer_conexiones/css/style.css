@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+}
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    display: flex;
+    background-color: black;
+}
+
+.page {
+    width: 1000px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.menu-links {
+    font-size: 20px;
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right:40px;
+    align-items: center;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: cadetblue;
+    color: white;
+    padding: 2px 20px;
+}
+
+.main {
+    padding: 40px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+/* seccion card*/
+
+.card {
+    display: flexbox;
+    border: 4px;
+    border-color:rgb(182, 182, 182);
+    border-style: solid;
+    width: 580px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-header {
+    background-color: cadetblue;
+    height: 100px;
+    margin: 0px;
+}
+
+.profile {
+    width: 110px;
+    height: 110px;
+    border: 4px;
+    border-color:rgb(182, 182, 182);
+    border-style: solid;
+    border-radius: 50%;
+    display: flex;
+    background-color: white;
+    position: relative;
+    top: 40%;
+    left: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    height: 100px;
+    width: 100px;
+}
+
+.card-body {
+    margin: 70px 30px 20px;
+}
+
+.location {
+    display: flex;
+    margin:20px 0px;
+}
+
+.location-icon {
+    width: 10px;
+    margin-right: 10px;
+}
+
+.description {
+    line-height: 20px;
+}
+
+.card-option {
+    display: flex;
+    margin:20px 0px;
+}
+
+a.card-option-link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+
+.card-option-icon {
+    width: 15px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+/* seccion conexiones*/
+
+.requests-card {
+    padding: 0px;
+    border: 4px;
+    border-style: solid;
+    border-color:rgb(182, 182, 182);
+    width: 400px;
+}
+
+.requests-header {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+}
+
+.request-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: rgb(182, 182, 182);
+    border-radius: 50%;
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+}
+
+.connection-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: rgb(182, 182, 182);
+    border-radius: 50%;
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+}
+
+.friends-profile {
+    margin-right: 20px ;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.single-request {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.persona {
+    display: flex;
+    align-items: center;
+}
+
+.check-selector {
+    display: flex;   
+}
+
+.check {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(182, 182, 182);
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* seccion tus conexiones*/
+
+.connection-card {
+    padding: 0px;
+    border: 4px;
+    border-style: solid;
+    border-color:rgb(182, 182, 182);
+    width: 400px;
+}
+
+.connection-header {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+}
+
+.single-connection {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-more {
+    padding: 10px;
+    border-top: 4px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    border-color:rgb(182, 182, 182);
+}
+
+a.connection-option-link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+/* seccion educacion */
+
+.education-card {
+    padding: 0px;
+    border: 4px;
+    border-style: solid;
+    border-color:rgb(182, 182, 182);
+    width: 580px;
+}
+
+.education-header {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+}
+
+.education-content {
+    margin: 20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.education-title {
+}
+
+.education-date {
+    margin-bottom: 20px;
+    font-size: larger;
+    color: darkcyan;
+    font-weight: bold;
+}

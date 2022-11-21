@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pagina de perfil</title>
+</head>
+<body>
+    <div class="header">
+        <div class="page">
+            <div class="menu">
+                <div class="logo">
+                    <h1>Perfil</h1>
+                </div>
+                <a class="menu-links" href="#">Inicio</a>
+                <a class="menu-links" href="#">Mi Perfil</a>
+                <a class="menu-links" href="#">Conexiones</a>
+            </div>
+            <button class="btn">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="page">
+
+            <div class="post">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="profile">
+                            <img class="profile-img" src="img/user-circle.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="username">Sergio García</h2>
+                        <div class="location">
+                            <img class="location-icon "src="img/map-marker.png" alt="">
+                            <span>Asunción</span>
+                        </div>
+                        <div class="description">
+                            <p> Developer | Ingeniero | Mantecoins Expert</p>
+                            <p> Me muevo en las sobras desde el teclado a travez de internet!</p>
+                        </div>
+                        <div class="card-option">
+                            <img class="card-option-icon"src="img/gear.png" alt="">
+                            <a class="card-option-link" href="javascript:changeUser();">editar perfil</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        
+                        <div>Educación</div>
+                    </div>
+                    <div class="education-content">
+                            <h2 class="education-title">Coding Dojo - Full Stack Bootcamp</h2>
+                            <p class="education-date">Noviembre 19 2022</p>
+                            <p class="education-description">Ganador de cuadruple back belt, conocedor de 120 lenguajes de programación, e inventor del mate frio. Dueño de la primera heladeria de helados calientes del mundo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="requests-card">
+                    <div class="requests-header">
+                        <div class="request-counter" id="request-counter">2</div>
+                        <div>Solicitudes de conexiones</div>
+                    </div>
+                    <div class="requests-content">
+                        <div class="single-request" id="persona-1">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/todd-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Todd E
+                                </div>
+                            </div>
+                            <div class="check-selector">
+                                <div class="check" onclick="requestAcepted(this)">✓</div>
+                                <div class="check" onclick="requestDenied(this)">✗</div>
+                            </div>
+                        </div>
+                        <div class="single-request" id="persona-2">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/phil-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Phil K
+                                </div>
+                            </div>
+                            <div class="check-selector">
+                                <div class="check" onclick="requestAcepted(this)">✓</div>
+                                <div class="check" onclick="requestDenied(this)">✗</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="connection-card">
+                    <div class="connection-header">
+                        <div class="connection-counter" id="connection-counter">108</div>
+                        <div>Tus conexiones</div>
+                    </div>
+                    <div class="connection-content">
+                        <div class="single-connection">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/adrien-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Adrien D
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-connection">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/anne-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Anne J
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-connection">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/alayne-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Alayne T
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-connection">
+                            <div class="persona">
+                                <img class="friends-profile" src="assets/images/arry-s.jpg" alt="">
+                                <div class="friend-name">
+                                    Arry Y
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-more">
+                            <a  class="connection-option-link" href="#">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
