@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TiempoDojo</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">DojoWeather</div>
+                <div class="navbar-links">
+                    <a href="#" onclick="showCity(this)">Burbank</a>
+                    <a href="#" onclick="showCity(this)">Chicago</a>
+                    <a href="#" onclick="showCity(this)">Dallas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="city-header">
+            <div class="city">San Jose</div>
+            <div class="temp">
+                <div class="temp-label">show temperature in</div>
+                <select class="temp-mode" name="temp-mode" id="temp-mode" onchange="cambiarModo(this)">
+                    <option value="celsius">°C</option>
+                    <option value="farenheit">°F</option>
+                </select>
+            </div>
+        </div>
+
+        <hr class="separator" style="margin: 0 20px">
+
+        <div class="weather-cards">
+            <div class="weather-card">
+                <div class="day">Today</div>
+                <img class="weather-img" src="assets/some_rain.png" alt="">
+                <div class="description">some rain</div>
+                <div class="weather-temp">
+                    <div class="max" id="temp1">24</div>
+                    <div class="min" id="temp2">18</div>
+                </div>
+            </div>
+            <div class="weather-card">
+                <div class="day">Tomorrow</div>
+                <img class="weather-img" src="assets/some_sun.png" alt="">
+                <div class="description">some sun</div>
+                <div class="weather-temp">
+                    <div class="max" id="temp3">27</div>
+                    <div class="min" id="temp4">19</div>
+                </div>
+            </div>
+            <div class="weather-card">
+                <div class="day">Friday</div>
+                <img class="weather-img" src="assets/some_clouds.png" alt="">
+                <div class="description">some clouds</div>
+                <div class="weather-temp">
+                    <div class="max" id="temp5">21</div>
+                    <div class="min" id="temp6">16</div>
+                </div>
+            </div>
+            <div class="weather-card">
+                <div class="day">Saturday</div>
+                <img class="weather-img" src="assets/some_sun.png" alt="">
+                <div class="description">some sun</div>
+                <div class="weather-temp">
+                    <div class="max" id="temp7">26</div>
+                    <div class="min" id="temp8">21</div>
+                </div>
+            </div>
+        </div>
+        <div class="cookies-policy">
+            <img class="cookies-img" src="assets/cookie.png" alt="">
+            <div class="cookies-description">
+                <h2>Stop! Cookie time</h2>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse out traffic. <a href="#">Read More...</a></p>
+            </div>
+            <button class="cookies-acept" onclick="hideCookies(this)">I Accept</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

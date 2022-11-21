@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    /* Set the hr color */
+    color: #000; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.header {
+    background-color:steelblue
+}
+
+.container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 45px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+.navbar-links > a {
+    text-decoration: none;
+    color: white;
+}
+
+.city-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.temp {
+    display: flex;
+    gap: 10px;
+}
+
+.weather-cards {
+    columns: 4;
+    padding: 20px
+}
+
+.weather-card {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.weather-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.weather-temp {
+    display: flex;
+    gap: 40px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.max {
+    color: red;
+}
+
+.min {
+    color:blue;
+}
+
+.max::after, .min::after {
+    content: "°";
+}
+
+.day {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cookies-policy {
+    background-color: white;
+    width: 720px;
+    display: flex;
+    gap: 20px;
+    border: 4px;
+    border-style: solid;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: 340px;
+    margin-left: -360px;
+}
+
+.cookies-img {
+    width: 60px;
+    height: 60px;
+}
+
+.cookies-acept {
+    width: 200px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: steelblue;
+    color: black;
+    padding: 5px 0px;
+    border: #000;
+    border-style: solid;
+    box-shadow: 3px 3px #000;
+}
