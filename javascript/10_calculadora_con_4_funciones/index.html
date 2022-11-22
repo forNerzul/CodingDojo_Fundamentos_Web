@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Calculadora con 4 funciones</title>
+    </head>
+    <body>
+        <div id="calculator">
+            <div class="row row-rigth">
+                <div id="display">0</div>
+            </div>
+            <div class="row">
+                <button onclick="press(7);">7</button>
+                <button onclick="press(8);">8</button>
+                <button onclick="press(9);">9</button>
+                <button class="operator" onclick="setOP('/');">÷</button>
+            </div>
+            <div class="row">
+                <button onclick="press(4);">4</button>
+                <button onclick="press(5);">5</button>
+                <button onclick="press(6);">6</button>
+                <button class="operator" onclick="setOP('*');">×</button>
+            </div>
+            <div class="row">
+                <button onclick="press(1);">1</button>
+                <button onclick="press(2);">2</button>
+                <button onclick="press(3);">3</button>
+                <button class="operator" onclick="setOP('-');">−</button>
+            </div>
+            <div class="row">
+                <button onclick="clr();">C</button>
+                <button onclick="press(0);">0</button>
+                <button onclick="press('.');">.</button>
+                <button class="operator" onclick="setOP('+');">+</button>
+            </div>
+            <div class="row">
+                <button id="equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
