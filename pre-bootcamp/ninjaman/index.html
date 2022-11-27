@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .row{
+            height: 40px;
+        }
+        .wall {
+            height: 40px;
+            width: 40px;
+            background-color: blue;
+            display: inline-block;
+        }
+        .blank{
+            height: 40px;
+            width: 40px;
+            line-height: 0px;
+            background-color: black;
+            display: inline-block;
+        }
+        .sushi{
+            height: 40px;
+            width: 40px;
+            background-image: url('sushi.png');
+            background-color: black;
+            background-size: contain;
+            display: inline-block;
+        }
+        .onigiri{
+            height: 40px;
+            width: 40px;
+            background-image: url('onigiri.png');
+            background-color: black;
+            background-size: contain;
+            display: inline-block;
+        }
+        #ninjaman {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('ninja.gif');
+            background-size: contain;
+            position: absolute;
+        }
+        #bluey {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('bluey.gif');
+            background-size: contain;
+            position: absolute;
+        }
+        #pinky {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('pinky.gif');
+            background-size: contain;
+            position: absolute;
+        }
+        #pumpky {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('pumpky.gif');
+            background-size: contain;
+            position: absolute;
+        }
+        #red {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('red.gif');
+            background-size: contain;
+            position: absolute;
+        }
+        #scaredy {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            background-image: url('scaredy.png');
+            background-size: contain;
+            position: absolute;
+        }
+
+    </style>
+    <title>NinjaMan</title>
+</head>
+<body>
+    <div id="world"></div>
+    <div id="score">
+        <form action="">
+            <label for="sushiScore">Sushi:</label>
+            <input type="text" id="sushiScore" name="sushiScore" value="0">
+            <label for="onigiriScore">Onigiri:</label>
+            <input type="text" id="onigiriScore" name="onigiriScore" value="0">
+            <label for="lives">Lives:</label>
+            <input type="text" id="lives" name="lives" value="3">
+        </form>
+    </div>
+    <div id="ninjaman"></div>
+    <div id="bluey"></div>
+    <div id="pinky"></div>
+    <div id="pumpky"></div>
+    <div id="red"></div>
+    <div id="scaredy"></div>
+    <script type="text/javascript">
+        var world = [
+            [1,1,1,1,1,1,1,1,1,1],
+            [1,0,2,2,1,1,0,2,2,1],
+            [1,2,1,3,1,1,2,1,3,1],
+            [1,2,3,2,2,2,2,3,2,1],
+            [1,2,1,3,1,1,2,1,3,1],
+            [1,2,3,2,1,1,2,3,2,1],
+            [1,1,1,2,1,1,2,1,1,1],
+            [1,2,1,3,1,1,2,1,3,1],
+            [1,2,3,2,1,1,2,3,2,1],
+            [1,2,1,3,1,1,2,1,3,1],
+            [1,1,1,1,1,1,1,1,1,1],
+        ]
+
+        var worldDict = {
+            0: "blank",
+            1: "wall",
+            2: "sushi",
+            3: "onigiri",
+        }
+
+        
+        // generacion aleatoria de mapa no me gusta mucho en realidad por eso no voy a incluir xD
+        // function shuffleArray(array) {
+        //    for (let i = array.length - 1; i > 0; i--) {
+        //        const j = Math.floor(Math.random() * (i + 1));
+        //        [array[i], array[j]] = [array[j], array[i]];
+        //    }
+        // }
+
+        // shuffleArray(world);
+        // world.forEach(element => {
+        //    shuffleArray(element)
+        // });
+
+        function worldDraw() {
+            var output = "";
+            for (var row = 0; row < world.length; row++) {
+                output += "<div class='row'>";
+                for (var column = 0; column < world[row].length; column++) {
+                    // console.log(world[row][column]);
+                    output += `<div class='${worldDict[world[row][column]]}'></div>`;
+                }
+                output += "</div>";
+            }
+
+            document.getElementById('world').innerHTML = output;
+        }
+
+        worldDraw();
+
+        var ninjaman = {
+            x: 1,
+            y: 1,
+        }
+
+        var enemies = {
+            "bluey": {
+                x:1,
+                y:5
+            },
+            "pinky": {
+                x:8,
+                y:1
+            },
+            "pumpky": {
+                x:1,
+                y:9
+            },
+            "red": {
+                x:8,
+                y:9
+            },
+            // "scaredy": {
+            //     x:4,
+            //     y:0
+            // },
+        }
+
+        function ninjamanDraw() {
+            document.getElementById('ninjaman').style.left = ninjaman.x * 40 + "px";
+            document.getElementById('ninjaman').style.top = ninjaman.y * 40 + "px";
+        }
+
+        ninjamanDraw();
+
+        function enemyDraw(){
+            // bluey
+            document.getElementById("bluey").style.left = enemies.bluey.x * 40 + "px";
+            document.getElementById("bluey").style.top = enemies.bluey.y * 40 + "px";
+            // pinky
+            document.getElementById("pinky").style.left = enemies.pinky.x * 40 + "px";
+            document.getElementById("pinky").style.top = enemies.pinky.y * 40 + "px";
+            // pumpky
+            document.getElementById("pumpky").style.left = enemies.pumpky.x * 40 + "px";
+            document.getElementById("pumpky").style.top = enemies.pumpky.y * 40 + "px";
+            // red
+            document.getElementById("red").style.left = enemies.red.x * 40 + "px";
+            document.getElementById("red").style.top = enemies.red.y * 40 + "px";
+            // scaredy
+            // document.getElementById("scaredy").style.left = enemies.scaredy.x * 40 + "px";
+            // document.getElementById("scaredy").style.top = enemies.scaredy.y * 40 + "px";
+        }
+
+        enemyDraw();
+
+        
+        function moveEnemy(){
+            function hipotenusa(x1, x2, y1, y2){
+                var hipo = Math.sqrt(Math.pow((x1 - x2),2) + Math.pow((y1 - y2),2));
+                return hipo;
+            }
+            // custom keycodes
+            // left 0 rigth 1 up 2 down 3
+            for ( var enemy in enemies){
+                var minHipotenusa = 100;
+                var hl, hr, hu, hd; 
+                var selection;
+                // para el caso de left
+                if (world[enemies[enemy].y][enemies[enemy].x - 1] != 1){
+                    hl = hipotenusa(enemies[enemy].x - 1, ninjaman.x, enemies[enemy].y, ninjaman.y);
+                    if (hl < minHipotenusa){
+                        minHipotenusa = hl;
+                        selection = 0;
+                    }
+                }
+                // para el caso de rigth
+                if (world[enemies[enemy].y][enemies[enemy].x + 1] != 1){
+                    hr = hipotenusa(enemies[enemy].x + 1, ninjaman.x, enemies[enemy].y, ninjaman.y);
+                    if (hr < minHipotenusa){
+                        minHipotenusa = hr;
+                        selection = 1;
+                    }
+                }
+                // para el caso de up
+                if (world[enemies[enemy].y - 1][enemies[enemy].x] != 1){
+                    hu = hipotenusa(enemies[enemy].x, ninjaman.x, enemies[enemy].y - 1, ninjaman.y);
+                    if (hu < minHipotenusa){
+                        minHipotenusa = hu;
+                        selection = 2;
+                    }
+                }
+                // para el caso de down
+                if (world[enemies[enemy].y + 1][enemies[enemy].x] != 1){
+                    hd = hipotenusa(enemies[enemy].x, ninjaman.x, enemies[enemy].y + 1, ninjaman.y);
+                    if (hd < minHipotenusa){
+                        minHipotenusa = hd;
+                        selection = 3;
+                    }
+                }
+                
+                // los enemigos avanzan
+                switch (selection){
+                    case 0: 
+                        enemies[enemy].x -=  1; 
+                        break;
+                    
+                    case 1: 
+                        enemies[enemy].x +=  1; 
+                        break;
+                    
+                    case 2: 
+                        enemies[enemy].y -=  1; 
+                        break;
+                    
+                    case 3: 
+                        enemies[enemy].y +=  1; 
+                        break;
+                    
+                    default: break;
+                }
+                console.log("Enemy: ",enemy,"Distancia: ",minHipotenusa,"Direccion",selection);
+            }
+        
+        }
+
+        
+        var sushiScore = 0, onigiriScore = 0, lives = 3;
+        
+        function collision(){
+            function reset(){
+                ninjaman = {
+                    x: 1,
+                    y: 1,
+                }
+                
+                enemies = {
+                    "bluey": {
+                        x:1,
+                        y:5
+                    },
+                    "pinky": {
+                        x:8,
+                        y:1
+                    },
+                    "pumpky": {
+                        x:1,
+                        y:9
+                    },
+                    "red": {
+                        x:8,
+                        y:9
+                    },
+                    // "scaredy": {
+                    //     x:4,
+                    //     y:0
+                    // },
+                }
+            }
+            for (var enemy in enemies){
+                if(enemies[enemy].x == ninjaman.x && enemies[enemy].y == ninjaman.y ) {
+                    lives--;
+                    
+                    reset();
+                }
+            }
+            console.log("Lives:",lives);
+            if(lives == 0) {
+                document.getElementById("world").innerHTML = "<h1>GAME OVER =( !</h1>";
+            }
+        }
+
+        function scoreDraw(){
+            document.getElementById("lives").value = lives;
+            document.getElementById("sushiScore").value = sushiScore;
+            document.getElementById("onigiriScore").value = onigiriScore;  
+        }
+
+        scoreDraw();
+
+        document.onkeydown = function (key) {
+            // keycode left 37 rigth 39 up 38 down 40
+            // console.log(key);
+            if (key.keyCode == 37 && world[ninjaman.y][ninjaman.x - 1] != 1 ) {
+                ninjaman.x -= 1;
+                if (world[ninjaman.y][ninjaman.x] == 2){
+                    sushiScore += 1;
+                } else if (world[ninjaman.y][ninjaman.x] == 3) {
+                    onigiriScore += 1;
+                } 
+                world[ninjaman.y][ninjaman.x] = 0;
+                //console.log("left");
+            } else if (key.keyCode == 39 && world[ninjaman.y][ninjaman.x + 1] != 1){
+                ninjaman.x += 1;
+                if (world[ninjaman.y][ninjaman.x] == 2){
+                    sushiScore += 1;
+                } else if (world[ninjaman.y][ninjaman.x] == 3) {
+                    onigiriScore += 1;
+                }
+                world[ninjaman.y][ninjaman.x] = 0;
+                //console.log("rigth");
+            } else if (key.keyCode == 38 && world[ninjaman.y - 1 ][ninjaman.x] != 1) {
+                ninjaman.y -= 1;
+                if (world[ninjaman.y][ninjaman.x] == 2){
+                    sushiScore += 1;
+                } else if (world[ninjaman.y][ninjaman.x] == 3) {
+                    onigiriScore += 1;
+                }
+                world[ninjaman.y][ninjaman.x] = 0;
+                //console.log("up");
+            } else if (key.keyCode == 40 && world[ninjaman.y + 1][ninjaman.x] != 1) {
+                ninjaman.y += 1;
+                if (world[ninjaman.y][ninjaman.x] == 2){
+                    sushiScore += 1;
+                } else if (world[ninjaman.y][ninjaman.x] == 3) {
+                    onigiriScore += 1;
+                }
+                world[ninjaman.y][ninjaman.x] = 0;
+                //console.log("down");
+            }
+            ninjamanDraw();
+            moveEnemy();
+            enemyDraw();
+            worldDraw();
+            scoreDraw();
+            collision();
+        }
+        
+    </script>
+</body>
+</html>
